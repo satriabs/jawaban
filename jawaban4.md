@@ -1,8 +1,26 @@
-for (i=0;i<baris;i++){
-        for(j=0;j<kolom;j++){
-            printf ("baris %d kolom %d: ",i+1,j+1);
-            scanf ("%d",&m[i][j]);
-        }
-    }
+<?php 
+	function cetak_deret_fibonacci($jumlah){
+		// nilai awal 
+		$angka_pertama = 0;
+		$angka_kedua = 1;
 
-printf ("\n");
+		//menyimpan string angka pertama
+		$hasil = "$angka_pertama $angka_kedua ";
+		for ($i=0; $i<$jumlah-2; $i++) {
+			// menghitung angka fibonacci
+			$output = $angka_kedua + $angka_pertama;
+			// hasilnya akan ditambahkan ke string $hasil
+			$hasil = $hasil."$output ";
+
+			//masukan angka untuk dilakuakn perhitungan berikutnya 
+			$angka_pertama = $angka_kedua;
+			$angka_kedua = $output;
+		}
+		return $hasil;
+	}
+	// menampilkan nilai berdasarkan function dengan jumlah fibonacci
+	
+	echo cetak_deret_fibonacci(7);
+	echo "<br>";
+
+?>
