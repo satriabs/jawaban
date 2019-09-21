@@ -20,7 +20,7 @@
 	}
 	// menampilkan nilai berdasarkan function dengan jumlah fibonacci
 	
-	echo cetak_deret_fibonacci(7);
+	echo cetak_deret_fibonacci(4);
 	echo "<br>";
 
 ?>
